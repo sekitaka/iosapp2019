@@ -14,7 +14,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-Mi-rZm">
+                                <rect key="frame" x="20" y="44" width="73" height="30"/>
+                                <state key="normal" title="TODO追加"/>
+                                <connections>
+                                    <action selector="addTodo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4o8-iQ-fUr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGy-6w-mDN">
+                                <rect key="frame" x="20" y="82" width="104" height="30"/>
+                                <state key="normal" title="TODO件数取得"/>
+                                <connections>
+                                    <action selector="showTodoCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lxT-ba-4xm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DGy-6w-mDN" firstAttribute="top" secondItem="WTY-Mi-rZm" secondAttribute="bottom" constant="8" id="chn-t7-tjd"/>
+                            <constraint firstItem="DGy-6w-mDN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kRo-MH-LRU"/>
+                            <constraint firstItem="WTY-Mi-rZm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oad-LY-Rcp"/>
+                            <constraint firstItem="WTY-Mi-rZm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tJq-vQ-t9U"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

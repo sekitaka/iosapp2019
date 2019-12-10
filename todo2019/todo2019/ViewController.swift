@@ -7,14 +7,36 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("ViewDidLoad")
     }
 
+    @IBAction func addTodo(_ sender: UIButton) {
+        print("add todo clicked")
+        let realm = try! Realm()
+        try! realm.write() {
+            let now = Date()
+            let nowTimeInterval = now.timeIntervalSince1970
+            let todo = realm.create(Todo.self, value: [
+                "uuid": "\(nowTimeInterval)"
+            ])
+            todo.title = "Hoge \(nowTimeInterval)"
+            todo.detail = "hogehoge body \(nowTimeInterval)"
+            todo.createdAt = now
+            print("added todo \(nowTimeInterval)")
+        }
+    }
 
+    @IBAction func showTodoCount(_ sender: Any) {
+        print("show todo count clicked")
+        let realm = try! Realm()
+        let todos = realm.objects(Todo.self)
+        print("todo count is \(todos.count)")
+    }
 }
 
