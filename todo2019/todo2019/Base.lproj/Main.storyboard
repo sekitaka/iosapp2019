@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n0u-re-hUU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -16,33 +16,88 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTY-Mi-rZm">
-                                <rect key="frame" x="20" y="44" width="73" height="30"/>
+                                <rect key="frame" x="20" y="88" width="73" height="30"/>
                                 <state key="normal" title="TODO追加"/>
                                 <connections>
                                     <action selector="addTodo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4o8-iQ-fUr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGy-6w-mDN">
-                                <rect key="frame" x="20" y="82" width="104" height="30"/>
+                                <rect key="frame" x="20" y="126" width="104" height="30"/>
                                 <state key="normal" title="TODO件数取得"/>
                                 <connections>
                                     <action selector="showTodoCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lxT-ba-4xm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVX-Sr-gRH">
+                                <rect key="frame" x="20" y="164" width="89" height="30"/>
+                                <state key="normal" title="TODOリスト"/>
+                                <connections>
+                                    <segue destination="fqi-p7-Pt3" kind="show" id="1pU-OE-dY6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="rVX-Sr-gRH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="L4J-Fp-IFM"/>
                             <constraint firstItem="DGy-6w-mDN" firstAttribute="top" secondItem="WTY-Mi-rZm" secondAttribute="bottom" constant="8" id="chn-t7-tjd"/>
                             <constraint firstItem="DGy-6w-mDN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kRo-MH-LRU"/>
                             <constraint firstItem="WTY-Mi-rZm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oad-LY-Rcp"/>
+                            <constraint firstItem="rVX-Sr-gRH" firstAttribute="top" secondItem="DGy-6w-mDN" secondAttribute="bottom" constant="8" id="qml-Sp-NO5"/>
                             <constraint firstItem="WTY-Mi-rZm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tJq-vQ-t9U"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SkB-wq-bAf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="wtf-pW-G0g">
+            <objects>
+                <tableViewController id="fqi-p7-Pt3" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2MH-lS-J1h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="P7w-FF-Snh">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P7w-FF-Snh" id="hjt-pk-8ra">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fqi-p7-Pt3" id="rjl-iP-bnT"/>
+                            <outlet property="delegate" destination="fqi-p7-Pt3" id="znR-vl-djH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="W6a-dV-fXh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRT-By-ePQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="146"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jd2-HW-OPk">
+            <objects>
+                <navigationController id="n0u-re-hUU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oUE-uo-9dU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mhV-G8-tGk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OBw-zv-2mF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-533" y="-536"/>
         </scene>
     </scenes>
 </document>
