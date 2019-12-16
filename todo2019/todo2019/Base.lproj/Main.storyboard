@@ -36,11 +36,20 @@
                                     <segue destination="fqi-p7-Pt3" kind="show" id="1pU-OE-dY6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqS-XT-NJe">
+                                <rect key="frame" x="20" y="202" width="115" height="30"/>
+                                <state key="normal" title="Animationテスト"/>
+                                <connections>
+                                    <segue destination="ars-hh-5xW" kind="show" id="kWO-PQ-xtQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rVX-Sr-gRH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="L4J-Fp-IFM"/>
+                            <constraint firstItem="wqS-XT-NJe" firstAttribute="top" secondItem="rVX-Sr-gRH" secondAttribute="bottom" constant="8" id="QlM-W4-f9w"/>
                             <constraint firstItem="DGy-6w-mDN" firstAttribute="top" secondItem="WTY-Mi-rZm" secondAttribute="bottom" constant="8" id="chn-t7-tjd"/>
+                            <constraint firstItem="wqS-XT-NJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jZF-MI-c0W"/>
                             <constraint firstItem="DGy-6w-mDN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="kRo-MH-LRU"/>
                             <constraint firstItem="WTY-Mi-rZm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oad-LY-Rcp"/>
                             <constraint firstItem="rVX-Sr-gRH" firstAttribute="top" secondItem="DGy-6w-mDN" secondAttribute="bottom" constant="8" id="qml-Sp-NO5"/>
@@ -90,7 +99,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zRT-By-ePQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="146"/>
+            <point key="canvasLocation" x="1145" y="-85"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jd2-HW-OPk">
@@ -106,7 +115,48 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBw-zv-2mF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533" y="-536"/>
+            <point key="canvasLocation" x="-658" y="146"/>
+        </scene>
+        <!--Animation View Controller-->
+        <scene sceneID="ZXH-Nf-EiY">
+            <objects>
+                <viewController id="ars-hh-5xW" customClass="AnimationViewController" customModule="todo2019" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Di8-g5-xQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zs6-Rh-NWp">
+                                <rect key="frame" x="10" y="98" width="50" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="4rT-kC-VOd"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ei8-K2-W3i"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50x-28-zgT">
+                                <rect key="frame" x="254" y="108" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="ars-hh-5xW" eventType="touchUpInside" id="p7O-Si-g4S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zs6-Rh-NWp" firstAttribute="leading" secondItem="0TX-rT-xjh" secondAttribute="leading" constant="10" id="DeR-Ro-E9r"/>
+                            <constraint firstItem="zs6-Rh-NWp" firstAttribute="top" secondItem="0TX-rT-xjh" secondAttribute="top" constant="10" id="gmV-h7-Oqx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0TX-rT-xjh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bB9-N8-det"/>
+                    <connections>
+                        <outlet property="rectView" destination="zs6-Rh-NWp" id="oXV-qV-fzB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VS-cD-4xH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1145" y="676"/>
         </scene>
     </scenes>
 </document>
