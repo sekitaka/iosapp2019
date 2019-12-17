@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ViewDidLoad")
+//        hoge()
+    }
+    
+    func hoge() {
+        if let view = Bundle(for: type(of: self)).loadNibNamed("CustomView", owner: self, options: nil)?.first as? UIView {
+            self.view.addSubview(view)
+        }
     }
 
     @IBAction func addTodo(_ sender: UIButton) {
