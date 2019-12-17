@@ -9,37 +9,24 @@
 import UIKit
 
 class AnimationViewController: UIViewController {
-
-    @IBOutlet weak var rectView: UIView!
+    let iconSize = 50.0
+    @IBOutlet weak var icon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 拡大のアンカーポイントをボトムに移動
+        self.icon.layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+        // ↑の分位値が変わるので相殺する
+        self.icon.center.y += 25
+        self.icon.transform = CGAffineTransform(scaleX: 0, y: 0)
 
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        let x = self.rectView.center.x
-        let y = self.rectView.center.y
-        self.rectView.transform = CGAffineTransform(scaleX: 0, y: 0)
-//        self.rectView.center.y = 300
-//        UIView.animate(withDuration: 0.6,
-//        animations: {
-//            self.rectView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-//            self.rectView.center.y += 20
-//        },
-//        completion: { _ in
-//        })
-        
-        UIView.animate(withDuration: 5, delay: 0, options: .curveEaseIn, animations: {
-            
-            // TODO アンカー を水平中央、垂直ボトムにする
+                self.icon.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             let a = CGAffineTransform(scaleX: 1, y: 1  )
-            let b = a.translatedBy(x: 0, y: -25) // オブジェクト中心からの相対位置？
-//            a.translatedBy(x: 0, y: 0   )
-            //self.rectView.transform = CGAffineTransform(scaleX: 1, y: 1)
-            self.rectView.transform = b
-            //self.rectView.center.y -= 20
+            self.icon.transform = a
         }, completion: { _ in
             
         })

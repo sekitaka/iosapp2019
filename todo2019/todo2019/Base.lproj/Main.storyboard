@@ -125,38 +125,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zs6-Rh-NWp">
-                                <rect key="frame" x="10" y="98" width="50" height="50"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="4rT-kC-VOd"/>
-                                    <constraint firstAttribute="height" constant="50" id="Ei8-K2-W3i"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50x-28-zgT">
-                                <rect key="frame" x="254" y="108" width="46" height="30"/>
+                                <rect key="frame" x="348" y="98" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="ars-hh-5xW" eventType="touchUpInside" id="p7O-Si-g4S"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="NRo-Ip-gZ1">
+                                <rect key="frame" x="20" y="98" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRm-ku-i8B">
+                                <rect key="frame" x="45" y="149" width="216" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="zs6-Rh-NWp" firstAttribute="leading" secondItem="0TX-rT-xjh" secondAttribute="leading" constant="10" id="DeR-Ro-E9r"/>
-                            <constraint firstItem="zs6-Rh-NWp" firstAttribute="top" secondItem="0TX-rT-xjh" secondAttribute="top" constant="10" id="gmV-h7-Oqx"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0TX-rT-xjh"/>
                     </view>
                     <navigationItem key="navigationItem" id="bB9-N8-det"/>
                     <connections>
-                        <outlet property="rectView" destination="zs6-Rh-NWp" id="oXV-qV-fzB"/>
+                        <outlet property="icon" destination="NRo-Ip-gZ1" id="JIc-7d-w4e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VS-cD-4xH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="676"/>
+            <point key="canvasLocation" x="1144.9275362318842" y="675"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="24" height="24"/>
+    </resources>
 </document>
