@@ -17,6 +17,16 @@ class ViewController: UIViewController {
 //        hoge()
     }
     
+    @IBAction func onAlertTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Alert", bundle: .main)
+        let alertVC = storyboard.instantiateViewController(identifier: "myalert") 
+        alertVC.modalPresentationStyle = .overCurrentContext
+        alertVC.modalTransitionStyle = .crossDissolve // 元が消える
+//        alertVC.providesPresentationContextTransitionStyle = true
+//        alertVC.definesPresentationContext = true
+        
+        present(alertVC, animated: true)
+    }
     func hoge() {
         if let view = Bundle(for: type(of: self)).loadNibNamed("CustomView", owner: self, options: nil)?.first as? UIView {
             self.view.addSubview(view)

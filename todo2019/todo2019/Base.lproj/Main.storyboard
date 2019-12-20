@@ -44,11 +44,27 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qj1-T3-Ia6">
-                                <rect key="frame" x="20" y="240" width="108" height="30"/>
+                                <rect key="frame" x="18" y="240" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="カスタムビュー"/>
                                 <connections>
                                     <segue destination="43d-Vg-nk0" kind="show" id="ZfC-2a-0qp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-rX-0dP">
+                                <rect key="frame" x="20" y="278" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Modal"/>
+                                <connections>
+                                    <segue destination="OD8-Qh-5WM" kind="presentation" id="Jkw-Re-bMg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8q-5L-OFA">
+                                <rect key="frame" x="18" y="316" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Alert"/>
+                                <connections>
+                                    <action selector="onAlertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A9r-5q-4qY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,6 +229,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43d-Uf-SNN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="918.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jFn-oV-qdO">
+            <objects>
+                <viewController id="OD8-Qh-5WM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LrV-zG-3zg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kz1-gf-ulJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OD-BY-iPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-659" y="919"/>
         </scene>
     </scenes>
     <resources>
