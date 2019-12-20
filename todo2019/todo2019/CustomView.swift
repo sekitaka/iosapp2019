@@ -8,33 +8,28 @@
 
 import UIKit
 
-class CustomView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        loadNib()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
-        loadNib()
-    }
-
-    // 参考
-    // https://qiita.com/maebaru/items/90f915f82e3d6425cbdc
-    func loadNib() {
-        if let view = Bundle(for: type(of: self)).loadNibNamed("CustomView", owner: self, options: nil)?.first as? UIView {
-            view.frame = self.bounds
-            self.addSubview(view)
+class CustomView: NibView {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var counterLabel: UILabel!
+    var counter : Int = 0{
+        didSet {
+            counterLabel.text = "\(counter)回タップ"
         }
     }
-
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    func setup(){
+    }
+    
+    @IBAction func onCountUpClicked(_ sender: UIButton) {
+        self.counter += 1
+    }
 }
