@@ -75,6 +75,14 @@
                                     <segue destination="YZr-el-XxL" kind="show" id="X1f-SL-saS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUP-If-s4u">
+                                <rect key="frame" x="302" y="88" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="表示倍率確認"/>
+                                <connections>
+                                    <segue destination="vSC-7E-FdV" kind="show" id="6S9-BQ-4Sc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -120,6 +128,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DTH-dg-xCp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139.13043478260872" y="-555.13392857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nfz-gk-KJC">
+            <objects>
+                <viewController id="vSC-7E-FdV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZHU-Wf-Tes">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdA-aq-lLL">
+                                <rect key="frame" x="20" y="128" width="374" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="OXT-IC-Gqg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ql2-ve-aDu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ヒラギノ丸ゴシックProN W4 17.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-Qg-dh2">
+                                <rect key="frame" x="20" y="103" width="273" height="17"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                <color key="textColor" red="0.89754247669999998" green="0.45577996970000001" blue="0.4078063965" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gW2-Qg-dh2" firstAttribute="leading" secondItem="XGf-fE-kEW" secondAttribute="leading" constant="20" id="1mr-Jt-ZkR"/>
+                            <constraint firstItem="XGf-fE-kEW" firstAttribute="trailing" secondItem="kdA-aq-lLL" secondAttribute="trailing" constant="20" id="azD-gy-dff"/>
+                            <constraint firstItem="kdA-aq-lLL" firstAttribute="top" secondItem="gW2-Qg-dh2" secondAttribute="bottom" constant="8" id="mqB-K6-uwu"/>
+                            <constraint firstItem="kdA-aq-lLL" firstAttribute="leading" secondItem="XGf-fE-kEW" secondAttribute="leading" constant="20" id="tDv-ku-otf"/>
+                            <constraint firstItem="kdA-aq-lLL" firstAttribute="top" secondItem="XGf-fE-kEW" secondAttribute="top" constant="40" id="xy0-PK-gXk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XGf-fE-kEW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fol-AZ-L1x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozU-bh-Q0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989.8550724637682" y="320.75892857142856"/>
         </scene>
         <!--Todos View Controller Table View Controller-->
         <scene sceneID="wtf-pW-G0g">
@@ -281,7 +330,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Baloon" width="29.333333969116211" height="27.666666030883789"/>
+        <image name="Baloon" width="29.333333969116211" height="26.666666030883789"/>
         <image name="Image" width="24" height="24"/>
     </resources>
 </document>

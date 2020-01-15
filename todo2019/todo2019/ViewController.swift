@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     
     @IBAction func onAlertTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Alert", bundle: .main)
-        let alertVC = storyboard.instantiateViewController(identifier: "myalert") 
+
+        let alertVC = storyboard.instantiateViewController(withIdentifier: "myalert")
+
         alertVC.modalPresentationStyle = .overCurrentContext
         alertVC.modalTransitionStyle = .crossDissolve // 元が消える
 //        alertVC.providesPresentationContextTransitionStyle = true
